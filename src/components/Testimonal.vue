@@ -110,15 +110,15 @@
             </q-carousel-slide>
         </q-carousel>
         <!-- Show On Small Devices -->
-        <q-carousel v-model="slide1" :transition-duration="1000" height="300px" control-color="amber" swipeable autoplay
-            infinite class="showOnSmallDevices">
+        <q-carousel v-model="slide1" ref="carousel" :transition-duration="1000" height="300px" control-color="amber" swipeable autoplay
+            infinite class="bg-grey-9 showOnSmallDevices">
             <q-carousel-slide :name="1" class="column nowrap">
 
                 <q-card class="full-height ">
                     <q-card-section class="full-height">
                         <div class="column flex-center  q-pa-sm full-height">
                             <span class="">Client Name</span>
-                            <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
                             </p>
@@ -166,6 +166,16 @@
                     </q-card-section>
                 </q-card>
             </q-carousel-slide>
+
+            <template v-slot:control>
+                <q-carousel-control class="q-gutter-xs" position="bottom-right" :offset="[18,18]">
+                    <q-btn push round dense color="orange" text-color="black" icon="arrow_left"
+                        @click="$refs.carousel.previous()" />
+                    <q-btn push round dense color="orange" text-color="black" icon="arrow_right"
+                        @click="$refs.carousel.next()" />
+
+                </q-carousel-control>
+            </template>
         </q-carousel>
     </div>
 </template>

@@ -18,6 +18,7 @@
       </div>
     </div>
     <Testimonal/>
+    <Contact/>
   </q-page>
 </template>
 
@@ -28,11 +29,12 @@ import AboutMe from '@/components/AboutMe.vue';
 import Listen from '@/components/Listen.vue';
 import Watch from '@/components/Watch.vue';
 import Testimonal from '@/components/Testimonal.vue';
+import Contact from '@/components/Contact.vue';
 // @ is an alias to /src
 
 export default {
   name: 'HomeView',
-  components: { Audio, Home, AboutMe, Listen, Watch, Testimonal }
+  components: { Audio, Home, AboutMe, Listen, Watch, Testimonal, Contact }
 }
 </script>
 <style scoped>

@@ -2,40 +2,34 @@
     <div class="servicesContainer">
         <span class="serviceHeading">Watch</span>
         <p class="underline"></p>
-        <div class="row flex flex-center q-gutter-y-md " style="width: 90%;padding: 10px; margin: 0 auto;">
+        <div class="row flex flex-center q-gutter-y-md videoBackgroundSize " >
             <div class="col-md-4 col-sm-4  col-xs-12 flex flex-center ">
-                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/67_CU8E9sdY?si=vUaO46XxO2s_Wsuz"
-                   >
+                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/67_CU8E9sdY?si=vUaO46XxO2s_Wsuz">
 
                 </q-video>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
-                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"
-                   >
+                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
-                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"
-                    >
+                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
-                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"
-                    >
+                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
-                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"
-                    >
+                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
-                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0"
-                    >
+                <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
@@ -55,7 +49,7 @@ export default {
     margin: 30px 0;
     background: url('../assets/voiceOverLogo.jpg') center/cover no-repeat;
     padding: 10px;
-} 
+}
 
 .servicesContainerWrapper {
     width: 80%;
@@ -79,18 +73,26 @@ export default {
     margin: 10px auto;
 }
 
-
+.videoBackgroundSize {
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+}
 
 .videoSize {
     height: 200px;
-    width: 400px;
+    width: 100%;
     border-radius: 10px;
     margin: 0 10px;
 }
 
 @media (max-width: 576px) {
     .videoSize {
-        width: 250px;
+        width: 100%;
+    }
+
+    .videoBackgroundSize {
+        width: 100%;
     }
 }
 </style>
