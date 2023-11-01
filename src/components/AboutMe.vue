@@ -1,5 +1,5 @@
 <template>
-    <div class="aboutContainer">
+    <section class="aboutContainer" >
         <div class="row justify-evenly  ">
             <div class="col-xs-12 col-sm-2  col-md-2  flex flex-center ">
                 <div class="aboutContainerWrapper">
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-    </div>
+    </section>
 </template>
 <script>
 import { ref } from 'vue';

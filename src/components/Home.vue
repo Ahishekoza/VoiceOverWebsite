@@ -1,6 +1,6 @@
 <template>
 
-      <div class="homeContainer">
+      <section class="homeContainer" >
         <div class="homeWrapperContainer">
           <div class="row ">
             <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 flex flex-center">
@@ -24,7 +24,7 @@
           </div>
   
         </div>
-      </div>
+      </section>
 
   </template>
   

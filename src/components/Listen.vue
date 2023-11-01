@@ -1,5 +1,5 @@
 <template>
-    <div class="listenContainer">
+    <section class="listenContainer">
         <div class="listenContainerWrapper">
             <p class="listenHeading">Listen</p>
             <p class="underline"></p>
@@ -126,7 +126,7 @@
             </div>
 
         </div>
-    </div>
+    </section>
 </template>
 <script>
 import { ref } from 'vue';

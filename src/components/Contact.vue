@@ -1,5 +1,5 @@
 <template>
-  <div class="contactContainer">
+  <section class="contactContainer">
     <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12   column flex-center q-py-md">
         <h5 class=" voiceOverHeading">Ready To Start Your Voice Over Project with Me</h5>
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
 export default {

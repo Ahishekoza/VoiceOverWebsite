@@ -1,5 +1,5 @@
 <template>
-    <div class="servicesContainer">
+    <section class="servicesContainer">
         <span class="serviceHeading">Watch</span>
         <p class="underline"></p>
         <div class="row flex flex-center q-gutter-y-md videoBackgroundSize " >
@@ -34,7 +34,7 @@
                 </q-video>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

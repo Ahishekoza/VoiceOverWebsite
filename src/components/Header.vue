@@ -14,7 +14,7 @@
         <q-toolbar inset class="insertToolbarWidth">
             <q-img src="../assets/voiceOverLogo.jpg" class="imageHeightWidth" />
             <q-space class="NotShowInSmallerDevices" />
-            <q-tabs v-model="tab" class="NotShowInSmallerDevices">
+            <q-tabs v-model="tab" class="NotShowInSmallerDevices" @click="handleSection">
                 <q-tab name="home">
                     <a>Home</a>
                 </q-tab>
@@ -95,6 +95,9 @@ export default {
         }
     },
     methods: {
+        handleSection(){
+           this.$emit('sectionId',this.tab)
+        },
         handleOpeningOfDrawer() {
             this.openDrawer = true
         },

@@ -1,5 +1,5 @@
 <template>
-    <div class="testimonalContainer">
+    <section class="testimonalContainer">
         <span class="testimonalHeading">Testimonals</span>
         <p class="underline"></p>
         <q-carousel class="noShowOnSmallScreen " v-model="slide" control-color="amber" :transition-duration="1000"
@@ -198,7 +198,7 @@
                 </q-carousel-control>
             </template>
         </q-carousel>
-    </div>
+    </section>
 </template>
 <script>
 import { ref } from 'vue';
