@@ -1,9 +1,14 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-      <Header />
+    <Header />
     <q-page-container>
-      <HomeView/>
+      <HomeView />
     </q-page-container>
+    <q-footer >
+      <q-toolbar >
+        <q-toolbar-title>Footer</q-toolbar-title>
+      </q-toolbar>
+    </q-footer>
   </q-layout>
 </template>
 

@@ -45,6 +45,7 @@ export default {
   letter-spacing: 2px;
   text-align: center;
   display: block;
+  font-family: 'Lora', serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 

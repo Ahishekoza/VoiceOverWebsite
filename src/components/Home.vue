@@ -6,7 +6,7 @@
             <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 flex flex-center">
               <q-img src="../assets/voiceOverLogo.jpg" class="homeImage " v-motion-slide-visible-left />
             </div>
-            <div class="col-md-8 col-lg-8 col-sm-6 col-xs-12 column flex-center q-mt-md" v-motion-slide-visible-right>
+            <div class="col-md-8 col-lg-8 col-sm-6 col-xs-12 column flex-center q-mt-md" >
               <span class="homeHeaderName ">Pranjal Vyas</span>
               <span class="underline"></span>
               <div class="homeContentContainer ">
@@ -67,6 +67,7 @@
     font-size: 1.8rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Lora', serif;
   }
   
   .underline {
@@ -84,6 +85,7 @@
   .homeContent {
     font-size: 1.3rem;
     margin: 10px 0;
+    font-family: 'Work Sans', sans-serif;
   }
   
   @media (max-width: 576px) {

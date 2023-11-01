@@ -56,19 +56,22 @@
                     <div style="padding: 10px;" v-motion-slide-visible-left>
                         <p class="homeHeaderName ">About Me</p>
                         <p class="underline"></p>
-                        <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, asperiores?</p>
+                        <p class="homeContent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus,
+                            asperiores?</p>
                         <br>
-                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error sint, enim
+                        <p class="homeContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error
+                            sint, enim
                             ratione odit
                             neque officiis recusandae veniam sed dolore.</p>
                         <br>
-                        <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, eos odio debitis
+                        <p class="homeContent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, eos odio
+                            debitis
                             asperiores
                             dolor quae?</p>
                     </div>
                 </div>
                 <div class="col-xs-12  col-sm-6 offset-md-1 col-md-6 flex flex-center ">
-                    <div class="imageWrapper " v-motion-slide-visible-right>
+                    <div class="imageWrapper " v-motion-pop-visible>
                         <q-img src="../assets/voiceOverLogo.jpg" class="displayImage" />
                     </div>
                 </div>
@@ -167,6 +170,7 @@ export default {
     font-size: 1.8rem;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Lora', serif;
 }
 
 .underline {
@@ -174,6 +178,12 @@ export default {
     height: 1px;
     background-color: black;
     margin: 10px 0;
+}
+
+.homeContent {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .imageWrapper {
@@ -214,6 +224,12 @@ export default {
         margin: 10px auto;
     }
 
+    .homeContent {
+        font-size: 1.0rem;
+        margin: 10px 0;
+        font-family: 'Work Sans', sans-serif;
+    }
+
     .noShowOnSmallScreen {
         display: none
     }
@@ -236,13 +252,18 @@ export default {
         height: 300px;
         width: 300px;
     }
-    
+
     .noShowOnSmallScreen {
         display: none
     }
 
     .showOnSmallScreen {
         display: block;
+    }
+    .homeContent {
+        font-size: 1.0rem;
+        margin: 10px 0;
+        font-family: 'Work Sans', sans-serif;
     }
 
 

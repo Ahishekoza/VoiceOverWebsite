@@ -6,169 +6,190 @@
             navigation padding autoplay infinite transition-prev="slide-right" transition-next="slide-left" swipeable
             animated height="300px">
             <q-carousel-slide :name="1" class="column no-wrap">
-                <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-                    <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <div class="row fit justify-start items-center q-gutter-sm q-col-gutter no-wrap">
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card>
-                    <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card>
-
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
                 </div>
             </q-carousel-slide>
             <q-carousel-slide :name="2" class="column no-wrap">
                 <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-                    <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card>
-                    <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card>
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
                 </div>
             </q-carousel-slide>
             <q-carousel-slide :name="3" class="column no-wrap">
                 <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-                    <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card> <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card>
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
                 </div>
             </q-carousel-slide>
             <q-carousel-slide :name="4" class="column no-wrap">
                 <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-                    <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card> <q-card class="col-6 full-height ">
-                        <q-card-section class="full-height">
-                            <div class="column flex-center  q-pa-sm full-height">
-                                <span class="text-h6">Client Name</span>
-                                <p class="q-my-md text-h6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
+                    <div class="col-6 full-height">
+                        <q-img src="../assets/border-design-transparent-background-6.png"
+                            class="full-height rounded-borders">
+                            <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
+                                <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
+                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                                </p>
-                            </div>
-                        </q-card-section>
-                    </q-card>
+                                </span>
+                            </span>
+                        </q-img>
+                    </div>
                 </div>
             </q-carousel-slide>
         </q-carousel>
         <!-- Show On Small Devices -->
-        <q-carousel v-model="slide1" ref="carousel" :transition-duration="1000" height="300px" control-color="amber" swipeable autoplay
-            infinite class="bg-grey-9 showOnSmallDevices">
+        <q-carousel v-model="slide1" ref="carousel" :transition-duration="1000" height="300px" control-color="amber"
+            swipeable autoplay infinite class="bg-grey-9 showOnSmallDevices">
             <q-carousel-slide :name="1" class="column nowrap">
 
-                <q-card class="full-height ">
-                    <q-card-section class="full-height">
-                        <div class="column flex-center  q-pa-sm full-height">
-                            <span class="">Client Name</span>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <div class="full-height">
+                    <q-img src="../assets/border-design-transparent-background-6.png"
+                        class="full-height bg-white rounded-borders">
+                        <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
+                            <span class="q-mb-sm">Client Name</span>
+                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                            </p>
-                        </div>
-                    </q-card-section>
-                </q-card>
+                            </span>
+                        </span>
+                    </q-img>
+                </div>
 
             </q-carousel-slide>
             <q-carousel-slide :name="2" class="column no-wrap">
-                <q-card class="full-height ">
-                    <q-card-section class="full-height">
-                        <div class="column flex-center  q-pa-sm full-height">
-                            <span class="">Client Name</span>
-                            <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <div class="full-height">
+                    <q-img src="../assets/border-design-transparent-background-6.png"
+                        class="full-height bg-white rounded-borders">
+                        <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
+                            <span class="q-mb-sm">Client Name</span>
+                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                            </p>
-                        </div>
-                    </q-card-section>
-                </q-card>
+                            </span>
+                        </span>
+                    </q-img>
+                </div>
             </q-carousel-slide>
             <q-carousel-slide :name="3" class="column no-wrap">
-                <q-card class="full-height ">
-                    <q-card-section class="full-height">
-                        <div class="column flex-center  q-pa-sm full-height">
-                            <span class="">Client Name</span>
-                            <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <div class="full-height">
+                    <q-img src="../assets/border-design-transparent-background-6.png"
+                        class="full-height bg-white rounded-borders">
+                        <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
+                            <span class="q-mb-sm">Client Name</span>
+                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                            </p>
-                        </div>
-                    </q-card-section>
-                </q-card>
+                            </span>
+                        </span>
+                    </q-img>
+                </div>
             </q-carousel-slide>
             <q-carousel-slide :name="4" class="column no-wrap">
-                <q-card class="full-height ">
-                    <q-card-section class="full-height">
-                        <div class="column flex-center  q-pa-sm full-height">
-                            <span class="">Client Name</span>
-                            <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <div class="full-height">
+                    <q-img src="../assets/border-design-transparent-background-6.png"
+                        class="full-height bg-white rounded-borders">
+                        <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
+                            <span class="q-mb-sm">Client Name</span>
+                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
-                            </p>
-                        </div>
-                    </q-card-section>
-                </q-card>
+                            </span>
+                        </span>
+                    </q-img>
+                </div>
             </q-carousel-slide>
 
             <template v-slot:control>
-                <q-carousel-control class="q-gutter-xs" position="bottom-right" :offset="[18,18]">
+                <q-carousel-control class="q-gutter-xs" position="bottom-right" :offset="[18, 18]">
                     <q-btn push round dense color="orange" text-color="black" icon="arrow_left"
                         @click="$refs.carousel.previous()" />
                     <q-btn push round dense color="orange" text-color="black" icon="arrow_right"
@@ -205,6 +226,7 @@ export default {
     letter-spacing: 2px;
     display: block;
     text-align: center;
+    font-family: 'Lora', serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -237,5 +259,4 @@ export default {
     .showOnSmallDevices {
         display: block;
     }
-}
-</style>
+}</style>
