@@ -4,21 +4,21 @@
         <div class="homeWrapperContainer">
           <div class="row ">
             <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 flex flex-center">
-              <q-img src="../assets/voiceOverLogo.jpg" class="homeImage" />
+              <q-img src="../assets/voiceOverLogo.jpg" class="homeImage " v-motion-slide-visible-left />
             </div>
-            <div class="col-md-8 col-lg-8 col-sm-6 col-xs-12 column flex-center q-mt-md">
-              <span class="homeHeaderName">Pranjal Vyas</span>
+            <div class="col-md-8 col-lg-8 col-sm-6 col-xs-12 column flex-center q-mt-md" v-motion-slide-visible-right>
+              <span class="homeHeaderName ">Pranjal Vyas</span>
               <span class="underline"></span>
-              <div class="homeContentContainer">
-                <p class="homeContent">Indian Female Voice Artist (Marathi/Hindi/English/)</p>
+              <div class="homeContentContainer ">
+                <p class="homeContent  ">Indian Female Voice Artist (Marathi/Hindi/English/)</p>
                 <p class="homeContent">Pranjal Vyas is a skilled and versatile voice-over artist with a rich, resonant
                   voice. With a passion for bringing scripts to life, Pranjal's narration captivates listeners with its
                   expressive and emotive delivery.</p>
               </div>
               <div class="row  q-gutter-y-md" style="width: 90%; margin: 0 auto;">
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12"><Audio title="HINDI NARRATION" /></div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12"><Audio title="ENGLISH NARRATION" /></div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12"><Audio title="MARATHI NARRATION" /></div>
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 "><Audio title="HINDI NARRATION" /></div>
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 "><Audio title="ENGLISH NARRATION" /></div>
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 "><Audio title="MARATHI NARRATION" /></div>
               </div>
             </div>
           </div>
@@ -30,19 +30,22 @@
   
   <script>
   import Audio from '@/components/Audio.vue';
+
   
   // @ is an alias to /src
   
   export default {
     name: 'Home',
+   
     components: { Audio }
   }
   </script>
   <style scoped>
   .homeContainer {
-    height: fit-content;
+    height: 100%;
     width: 100%;
     padding: 10px;
+    min-height: 400px;
   }
   
   .homeWrapperContainer {
@@ -53,7 +56,9 @@
   }
   .homeImage {
     width: 100%;
-    height: 400px !important;
+    height: 100% ;
+    object-fit: cover;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   

@@ -5,3 +5,5 @@ Audio
 q-gutter-y-md
 
 carousel prop ( infinite )
+
+library used for animation is @vueuse/motion

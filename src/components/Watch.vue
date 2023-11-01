@@ -3,32 +3,32 @@
         <span class="serviceHeading">Watch</span>
         <p class="underline"></p>
         <div class="row flex flex-center q-gutter-y-md videoBackgroundSize " >
-            <div class="col-md-4 col-sm-4  col-xs-12 flex flex-center ">
+            <div  v-motion-fade-visible class="col-md-4 col-sm-4  col-xs-12 flex flex-center ">
                 <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/67_CU8E9sdY?si=vUaO46XxO2s_Wsuz">
 
                 </q-video>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
+            <div v-motion-fade-visible  class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
                 <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
+            <div v-motion-fade-visible  class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
                 <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
+            <div v-motion-fade-visible  class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
                 <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
+            <div v-motion-fade-visible  class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
                 <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
+            <div v-motion-fade-visible  class="col-md-4 col-sm-4 col-xs-12 flex flex-center">
                 <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/k3_tw44QsZQ?rel=0">
 
                 </q-video>

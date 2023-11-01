@@ -9,7 +9,7 @@
                     <span class="recordingHeading">Hindi</span>
                     <div class="column q-gutter-y-sm">
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -49,7 +49,7 @@
                     <span class="recordingHeading">English</span>
                     <div class="column q-gutter-y-sm">
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -90,7 +90,7 @@
                     <span class="recordingHeading">Marathi</span>
                     <div class="column q-gutter-y-sm">
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div>
+                            <div v-motion-slide-visible-bottom>
                                 <span class="audioHeading">Hindi Audio</span>
                                 <audio controls>
                                     <source src="../assets/audios/file_example_MP3_700KB.mp3">

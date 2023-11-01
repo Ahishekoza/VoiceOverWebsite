@@ -1,7 +1,7 @@
 <template>
     <div class="aboutContainer">
         <div class="row justify-evenly  ">
-            <div class="col-xs-12 col-sm-2  col-md-2  flex flex-center">
+            <div class="col-xs-12 col-sm-2  col-md-2  flex flex-center ">
                 <div class="aboutContainerWrapper">
                     <span v-if="counting" class="countingNumber">{{ currentNumber }} </span>
                     <font-awesome-icon icon="fa-solid fa-plus" class="fa-2x q-ml-md" />
@@ -12,12 +12,12 @@
             <q-separator class="showVertical" vertical />
 
             <div class="col-xs-12 col-sm-8 col-md-9">
-                <q-carousel v-model="slide"  transition-prev="slide-right" transition-next="slide-left" swipeable animated
-                    :autoplay="autoplay" infinite :transition-duration="1000" height="150px">
+                <q-carousel class="noShowOnSmallScreen" v-model="slide" transition-prev="slide-right"
+                    transition-next="slide-left" swipeable animated :autoplay="autoplay" infinite
+                    :transition-duration="1000" height="150px">
                     <q-carousel-slide :name="1" class="column no-wrap">
                         <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
-                            <q-img class="rounded-borders col-6 full-height"
-                                src="../assets/voiceOverLogo.jpg" />
+                            <q-img class="rounded-borders col-6 full-height" src="../assets/voiceOverLogo.jpg" />
                             <q-img class="rounded-borders col-6 full-height"
                                 src="https://cdn.quasar.dev/img/parallax1.jpg" />
                         </div>
@@ -30,26 +30,45 @@
                         </div>
                     </q-carousel-slide>
                 </q-carousel>
+
+                <q-carousel class="showOnSmallScreen" v-model="slide" transition-prev="slide-right"
+                    transition-next="slide-left" swipeable animated :autoplay="autoplay" infinite
+                    :transition-duration="1000" height="150px">
+                    <q-carousel-slide :name="1" class="column no-wrap">
+                        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+                            <q-img class="rounded-borders col-12 full-height" src="../assets/voiceOverLogo.jpg" />
+
+                        </div>
+                    </q-carousel-slide>
+                    <q-carousel-slide :name="2" class="column no-wrap">
+                        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+                            <q-img class="rounded-borders col-12 full-height"
+                                src="https://cdn.quasar.dev/img/parallax2.jpg" />
+                        </div>
+                    </q-carousel-slide>
+                </q-carousel>
             </div>
         </div>
 
         <div style="width: 96%; margin: 10px auto; padding: 10px; ">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-5 flex flex-center">
-                    <div style="padding: 10px;">
-                        <span class="homeHeaderName">About Me</span>
+                    <div style="padding: 10px;" v-motion-slide-visible-left>
+                        <p class="homeHeaderName ">About Me</p>
                         <p class="underline"></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, asperiores?</p>
+                        <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, asperiores?</p>
                         <br>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error sint, enim ratione odit
+                        <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error sint, enim
+                            ratione odit
                             neque officiis recusandae veniam sed dolore.</p>
                         <br>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, eos odio debitis asperiores
+                        <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, eos odio debitis
+                            asperiores
                             dolor quae?</p>
                     </div>
                 </div>
                 <div class="col-xs-12  col-sm-6 offset-md-1 col-md-6 flex flex-center ">
-                    <div class="imageWrapper">
+                    <div class="imageWrapper " v-motion-slide-visible-right>
                         <q-img src="../assets/voiceOverLogo.jpg" class="displayImage" />
                     </div>
                 </div>
@@ -169,6 +188,10 @@ export default {
     object-fit: cover;
 }
 
+.showOnSmallScreen {
+    display: none;
+}
+
 @media (max-width: 576px) {
     .customerWrapper {
         width: 80%;
@@ -190,6 +213,14 @@ export default {
 
         margin: 10px auto;
     }
+
+    .noShowOnSmallScreen {
+        display: none
+    }
+
+    .showOnSmallScreen {
+        display: block;
+    }
 }
 
 @media (max-width: 820px) {
@@ -205,7 +236,14 @@ export default {
         height: 300px;
         width: 300px;
     }
+    
+    .noShowOnSmallScreen {
+        display: none
+    }
+
+    .showOnSmallScreen {
+        display: block;
+    }
 
 
-}
-</style>
+}</style>
