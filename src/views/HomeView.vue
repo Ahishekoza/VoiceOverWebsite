@@ -53,7 +53,9 @@ import Footer from '@/components/Footer.vue';
       const sectionIdValue = ref('')
   
       const scrollToSection = (sectionId) => {
+        console.log(sectionId)
         const element = document.getElementById(sectionId);
+        console.log(element)
         if (element) {
           const headerHeight = 200; // Adjust this to the actual height of your header
           const scrollPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight;

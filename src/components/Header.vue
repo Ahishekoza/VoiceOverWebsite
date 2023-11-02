@@ -40,13 +40,30 @@
 
     <!-- Drawer -->
 
-    <q-drawer v-model="openDrawer" overlay bordered class="bg-grey-2">
+    <q-drawer v-model="openDrawer" overlay bordered class="bg-grey-2" @hide="onDrawerClose">
         <!-- Closing Icon -->
         <span @click="handleClosingOfDrawer">
             <font-awesome-icon class="fa-2x absolute-right q-pa-md" icon="fa-solid fa-xmark" />
         </span>
         <!-- @ToDo : style -->
-        <q-list class="listContainer">
+        <q-tabs v-model="tab"    @click="handleSection" >
+                <q-tab style="color:red" name="home">
+                    <a>Home</a>
+                </q-tab>
+                <q-tab name="why">
+                    <a>Why PVS</a>
+                </q-tab>
+                <q-tab name="listenWatch">
+                    <a>Listen and Watch</a>
+                </q-tab>
+                <q-tab name="happyClients">
+                    <a>Happy Clients</a>
+                </q-tab>
+                <q-tab name="contact">
+                    <a>Contact</a>
+                </q-tab>
+            </q-tabs>
+        <!-- <q-list class="listContainer">
             <q-item clickable v-ripple @click="handleSectionScroll('home')">
                 <q-item-section avatar>
                     <font-awesome-icon style="color: #007bff;" class="fa-2x" icon="fa-solid fa-house" />
@@ -79,7 +96,7 @@
                     <q-item-label class="label">HAPPY CLIENTS</q-item-label>
                 </q-item-section>
             </q-item>
-        </q-list>
+        </q-list> -->
     </q-drawer>
 </template>
 <script>
@@ -103,6 +120,7 @@ export default {
     },
     methods: {
         handleSection(){
+            this.openDrawer=false
            this.$emit('sectionId',this.tab)
         },
         handleOpeningOfDrawer() {
@@ -111,6 +129,10 @@ export default {
         handleClosingOfDrawer() {
             this.openDrawer = false
         },
+
+        onDrawerClose(){
+            this.handleSection()
+        }
        
     }
 }
