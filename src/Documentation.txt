@@ -7,3 +7,11 @@ q-gutter-y-md
 carousel prop ( infinite )
 
 library used for animation is @vueuse/motion
+
+scrolling to sepecific loaction we use scrollInToView method
+const headerHeight = 200; // Adjust this to the actual height of your header
+        const scrollPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: 'smooth',
+        })

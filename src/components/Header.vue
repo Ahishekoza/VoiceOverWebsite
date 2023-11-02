@@ -1,6 +1,6 @@
 <template>
     <!-- Navbar -->
-    <q-header class="shadow-7 q-pa-md" elevated>
+    <q-header class="shadow-7 q-pa-md bg-black" elevated >
         <q-toolbar class="socialMediaContainer">
             <span class="emailId">
                 <font-awesome-icon icon="fa-solid fa-envelope" />
@@ -27,6 +27,9 @@
                 <q-tab name="happyClients">
                     <a>Happy Clients</a>
                 </q-tab>
+                <q-tab name="contact">
+                    <a>Contact</a>
+                </q-tab>
             </q-tabs>
             <q-space class="NotShowInBiggerDevices" />
             <span @click="handleOpeningOfDrawer">
@@ -44,7 +47,7 @@
         </span>
         <!-- @ToDo : style -->
         <q-list class="listContainer">
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple @click="handleSectionScroll('home')">
                 <q-item-section avatar>
                     <font-awesome-icon style="color: #007bff;" class="fa-2x" icon="fa-solid fa-house" />
                 </q-item-section>
@@ -52,7 +55,7 @@
                     <q-item-label class="label">HOME</q-item-label>
                 </q-item-section>
             </q-item>
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple  @click="handleSectionScroll('why')">
                 <q-item-section avatar>
                     <font-awesome-icon class="fa-2x" :icon="['fas', 'question']" />
                 </q-item-section>
@@ -60,7 +63,7 @@
                     <q-item-label class="label">WHY PVS</q-item-label>
                 </q-item-section>
             </q-item>
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple @click="handleSectionScroll('listenWatch')">
                 <q-item-section avatar>
                     <font-awesome-icon class="fa-2x" icon="fa-solid fa-headphones" />
                 </q-item-section>
@@ -68,7 +71,7 @@
                     <q-item-label class="label">LISTEN AND WATCH</q-item-label>
                 </q-item-section>
             </q-item>
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple @click="handleSectionScroll('happyClients')">
                 <q-item-section avatar>
                     <font-awesome-icon class="fa-2x" icon="fa-regular fa-pen-to-square" />
                 </q-item-section>
@@ -81,17 +84,21 @@
 </template>
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { ref } from 'vue';
+import { ref ,defineProps, withDefaults} from 'vue';
 export default {
     components: {
         FontAwesomeIcon
     },
-    setup() {
+    setup(props,{emit}) {
         const tab = ref('home')
         const openDrawer = ref('false')
+        const handleSectionScroll =(sectionName)=>{
+            emit('sectionIdMobile',sectionName)
+        }
         return {
             tab,
             openDrawer,
+            handleSectionScroll
         }
     },
     methods: {
@@ -103,7 +110,8 @@ export default {
         },
         handleClosingOfDrawer() {
             this.openDrawer = false
-        }
+        },
+       
     }
 }
 </script>

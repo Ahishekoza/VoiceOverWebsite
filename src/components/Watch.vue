@@ -1,8 +1,8 @@
 <template>
-    <section class="servicesContainer">
+    <div class="servicesContainer">
         <span class="serviceHeading">Watch</span>
         <p class="underline"></p>
-        <div class="row flex flex-center q-gutter-y-md videoBackgroundSize " >
+        <div class="row flex flex-center q-gutter-y-md videoBackgroundSize bg-white shadow-2 rounded-borders " >
             <div  v-motion-fade-visible class="col-md-4 col-sm-4  col-xs-12 flex flex-center ">
                 <q-video class="shadow-2 videoSize" src="https://www.youtube.com/embed/67_CU8E9sdY?si=vUaO46XxO2s_Wsuz">
 
@@ -34,7 +34,7 @@
                 </q-video>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <script>
@@ -47,15 +47,11 @@ export default {
     width: 100%;
     height: 100%;
     margin: 30px 0;
-    background: url('../assets/voiceOverLogo.jpg') center/cover no-repeat;
+    background-color: #0F0F0F;
     padding: 10px;
 }
 
-.servicesContainerWrapper {
-    width: 80%;
-    margin: 0 auto;
-    background-color: aqua;
-}
+
 
 .serviceHeading {
     text-transform: uppercase;
@@ -63,6 +59,7 @@ export default {
     letter-spacing: 2px;
     text-align: center;
     display: block;
+    color: white;
     font-family: 'Lora', serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -70,7 +67,7 @@ export default {
 .underline {
     width: 30%;
     height: 1px;
-    background-color: black;
+    background-color: white;
     margin: 10px auto;
 }
 

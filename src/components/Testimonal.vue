@@ -1,8 +1,8 @@
 <template>
-    <section class="testimonalContainer">
+    <div class="testimonalContainer">
         <span class="testimonalHeading">Testimonals</span>
         <p class="underline"></p>
-        <q-carousel class="noShowOnSmallScreen " v-model="slide" control-color="amber" :transition-duration="1000"
+        <q-carousel class="noShowOnSmallScreen " v-model="slide" control-color="black" :transition-duration="1000"
             navigation padding autoplay infinite transition-prev="slide-right" transition-next="slide-left" swipeable
             animated height="300px">
             <q-carousel-slide :name="1" class="column no-wrap">
@@ -198,7 +198,7 @@
                 </q-carousel-control>
             </template>
         </q-carousel>
-    </section>
+    </div>
 </template>
 <script>
 import { ref } from 'vue';
