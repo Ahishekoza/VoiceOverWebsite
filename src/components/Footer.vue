@@ -55,7 +55,7 @@ export default {
     margin: 0 10px;
 }
 .buttonIcon:hover{
-    background-color: red;
+    background-color:#F35D52;
     color: white;
 }
 

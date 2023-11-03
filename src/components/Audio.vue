@@ -3,7 +3,7 @@
         <q-card class="audioIconsContainer">
             <q-item>
                 <q-item-section>
-                    <span>{{ title }}</span>
+                    <span class="headerText">{{ title }}</span>
                 </q-item-section>
             </q-item>
             <q-item>
@@ -16,20 +16,13 @@
             </q-item>
         </q-card>
     </div>
-    <!-- <div class="audioIconsContainer" @click="handleStartPause">
-        <span style="margin-right: 10px; font-size: 18px;">HINDI</span>
-        <i class="audioIcon">
-            <font-awesome-icon :icon="isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play'" class="fa-2x"
-                style="color:white;" />
-        </i>
-    </div> -->
+   
 </template>
   
 <script>
 import { ref } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-import myTrack from '../assets/audios/file_example_MP3_700KB.mp3'; // Adjust the path as needed
 
 export default {
     name: 'Audio',
@@ -37,18 +30,21 @@ export default {
         title: {
             type: String,
             default: 'HINDI'
+        },
+        audioPath:{
+            type: String,
         }
     },
     components: {
         FontAwesomeIcon
     },
-    setup() {
+    setup(props) {
         const isPlaying = ref(false);
-        let audio = null; // Initialize audio variable
+        let audio = null;
 
         const handleStartPause = () => {
             if (audio === null) {
-                audio = new Audio(myTrack);
+                audio = new Audio(props.audioPath);
             }
             if (isPlaying.value) {
                 audio.pause();
@@ -74,6 +70,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: black;
+    color: white;
    
 }
 
@@ -83,10 +81,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(249, 77, 77);
+    border: 2px solid white;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.headerText{
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @media (max-width: 576px) {

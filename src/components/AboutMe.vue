@@ -1,12 +1,12 @@
 <template>
-    <section class="aboutContainer" >
+    <section class="aboutContainer">
         <div class="row justify-evenly  ">
             <div class="col-xs-12 col-sm-2  col-md-2  flex flex-center ">
                 <div class="aboutContainerWrapper">
-                    <span v-if="counting" class="countingNumber">{{ currentNumber }} </span>
+                    <span v-if="counting" class="countingNumber text-red">{{ currentNumber }} </span>
                     <font-awesome-icon icon="fa-solid fa-plus" class="fa-2x q-ml-md" />
                 </div>
-                <span class="noOfClients">Clients</span>
+                <span class="noOfClients">CLIENTS</span>
 
             </div>
             <q-separator class="showVertical" vertical />
@@ -144,11 +144,14 @@ export default {
 .noOfClients {
     width: 80%;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 3px;
+    font-family: 'Playfair Display', serif;
 }
 
 .customerImageWrapper {
@@ -260,6 +263,7 @@ export default {
     .showOnSmallScreen {
         display: block;
     }
+
     .homeContent {
         font-size: 1.0rem;
         margin: 10px 0;
@@ -267,4 +271,5 @@ export default {
     }
 
 
-}</style>
+}
+</style>

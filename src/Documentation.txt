@@ -21,3 +21,5 @@ const headerHeight = 200; // Adjust this to the actual height of your header
 which emits our sectionId so we need to pass a reference variable to store the value of section and then pass it
 
 @hide will only and only call a function when the DrawerOpen is made to false
+
+to send an audio file from parent component to child component as a prop we need to import and then we need to pass a reference variable with the value of imported 

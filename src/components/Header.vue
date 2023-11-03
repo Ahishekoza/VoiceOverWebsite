@@ -88,6 +88,14 @@
                     <q-item-label class="label">HAPPY CLIENTS</q-item-label>
                 </q-item-section>
             </q-item>
+            <q-item clickable v-ripple active-class="menuLinkColor" :active="listValue==='contact'" @click="handleSectionMobile(listValue='contact')">
+                <q-item-section avatar>
+                    <q-icon name="call" ></q-icon>
+                </q-item-section>
+                <q-item-section>
+                    <q-item-label class="label">CONTACT</q-item-label>
+                </q-item-section>
+            </q-item>
         </q-list>
     </q-drawer>
 </template>
