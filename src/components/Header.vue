@@ -40,31 +40,31 @@
 
     <!-- Drawer -->
 
-    <q-drawer v-model="openDrawer" overlay bordered class="bg-grey-2" @hide="onDrawerClose">
+    <q-drawer v-model="openDrawer" overlay bordered class="bg-black text-white" @hide="onDrawerClose">
         <!-- Closing Icon -->
         <span @click="handleClosingOfDrawer">
             <font-awesome-icon class="fa-2x absolute-right q-pa-md" icon="fa-solid fa-xmark" />
         </span>
         <!-- @ToDo : style -->
-       <div class="column flex-center full-height">
-        <q-tabs v-model="tab" vertical class="text-teal " @click="handleSectionMobile">
-            <q-tab name="home" label="Home"/>
-            <q-tab name="why" label="Why PVS"/>
-            <q-tab name="listenWatch" label="Listen and Watch"/>
-            <q-tab name="happyClients" label="Happy Clients"/>
-            <q-tab name="contact" label="Contact"/>
-        </q-tabs>
-       </div>
-        <!-- <q-list class="listContainer">
-            <q-item clickable v-ripple @click="handleSectionScroll('home')">
+        <!-- <div class="column full-height q-mx-auto q-justify-center">
+            <q-tabs v-model="tab" vertical class="text-teal" @click="handleSectionMobile">
+                <q-tab name="home" label="Home" />
+                <q-tab name="why" label="Why PVS" />
+                <q-tab name="listenWatch" label="Listen and Watch" />
+                <q-tab name="happyClients" label="Happy Clients" />
+                <q-tab name="contact" label="Contact" />
+            </q-tabs>
+        </div> -->
+        <q-list class="listContainer">
+            <q-item clickable v-ripple active-class="menuLinkColor" :active="listValue==='home'" @click="handleSectionMobile(listValue='home')">
                 <q-item-section avatar>
-                    <font-awesome-icon style="color: #007bff;" class="fa-2x" icon="fa-solid fa-house" />
+                    <font-awesome-icon  class="fa-2x" icon="fa-solid fa-house" />
                 </q-item-section>
                 <q-item-section>
                     <q-item-label class="label">HOME</q-item-label>
                 </q-item-section>
             </q-item>
-            <q-item clickable v-ripple  @click="handleSectionScroll('why')">
+            <q-item clickable v-ripple active-class="menuLinkColor" :active="listValue==='why'"  @click="handleSectionMobile(listValue='why')">
                 <q-item-section avatar>
                     <font-awesome-icon class="fa-2x" :icon="['fas', 'question']" />
                 </q-item-section>
@@ -72,7 +72,7 @@
                     <q-item-label class="label">WHY PVS</q-item-label>
                 </q-item-section>
             </q-item>
-            <q-item clickable v-ripple @click="handleSectionScroll('listenWatch')">
+            <q-item clickable v-ripple active-class="menuLinkColor" :active="listValue==='listenWatch'" @click="handleSectionMobile(listValue='listenWatch')">
                 <q-item-section avatar>
                     <font-awesome-icon class="fa-2x" icon="fa-solid fa-headphones" />
                 </q-item-section>
@@ -80,7 +80,7 @@
                     <q-item-label class="label">LISTEN AND WATCH</q-item-label>
                 </q-item-section>
             </q-item>
-            <q-item clickable v-ripple @click="handleSectionScroll('happyClients')">
+            <q-item clickable v-ripple active-class="menuLinkColor" :active="listValue==='happyClients'" @click="handleSectionMobile(listValue='happyClients')">
                 <q-item-section avatar>
                     <font-awesome-icon class="fa-2x" icon="fa-regular fa-pen-to-square" />
                 </q-item-section>
@@ -88,7 +88,7 @@
                     <q-item-label class="label">HAPPY CLIENTS</q-item-label>
                 </q-item-section>
             </q-item>
-        </q-list> -->
+        </q-list>
     </q-drawer>
 </template>
 <script>
@@ -101,19 +101,21 @@ export default {
     setup(props, { emit }) {
         const tab = ref('home')
         const openDrawer = ref('false')
+        const listValue = ref('home')
         return {
             tab,
             openDrawer,
+            listValue
         }
     },
     methods: {
         handleSectionScreen() {
             this.$emit('sectionIdScreen', this.tab)
-           
+
         },
-        handleSectionMobile(){
+        handleSectionMobile(sectionId) {
             this.openDrawer = false
-            this.$emit('sectionIdMobile', this.tab)
+            this.$emit('sectionIdMobile', sectionId)
         },
         handleOpeningOfDrawer() {
             this.openDrawer = true
@@ -123,11 +125,11 @@ export default {
         },
 
         onDrawerClose() {
-            this.handleSectionMobile()
+            this.handleSectionMobile(this.listValue)
         }
 
     },
-    
+
 }
 </script>
 <style scoped>
@@ -175,6 +177,10 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.menuLinkColor{
+    color: #F7B800;
 }
 
 

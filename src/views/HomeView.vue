@@ -63,10 +63,6 @@ export default {
         })
       };
 
-
-      // console.log(element)
-      // 
-
     }
     const scrollToSectionMobile = (sectionId) => {
       const element = document.getElementById(sectionId);

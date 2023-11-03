@@ -8,10 +8,16 @@ carousel prop ( infinite )
 
 library used for animation is @vueuse/motion
 
-scrolling to sepecific loaction we use scrollInToView method
+scrolling to sepecific loaction we use scrollInToView method 
 const headerHeight = 200; // Adjust this to the actual height of your header
         const scrollPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight;
         window.scrollTo({
           top: scrollPosition,
           behavior: 'smooth',
         })
+
+
+@hide is a prop of Drawer which we use to close drawer and pass to specific section so when drawer is getting closed we are calling the function 
+which emits our sectionId so we need to pass a reference variable to store the value of section and then pass it
+
+@hide will only and only call a function when the DrawerOpen is made to false
