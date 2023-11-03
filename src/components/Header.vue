@@ -1,6 +1,6 @@
 <template>
     <!-- Navbar -->
-    <q-header class="shadow-7 q-pa-md bg-black" elevated >
+    <q-header class="shadow-7 q-pa-md bg-black" elevated>
         <q-toolbar class="socialMediaContainer">
             <span class="emailId">
                 <font-awesome-icon icon="fa-solid fa-envelope" />
@@ -14,7 +14,7 @@
         <q-toolbar inset class="insertToolbarWidth">
             <q-img src="../assets/voiceOverLogo.jpg" class="imageHeightWidth" />
             <q-space class="NotShowInSmallerDevices" />
-            <q-tabs v-model="tab" class="NotShowInSmallerDevices" @click="handleSection">
+            <q-tabs v-model="tab" class="NotShowInSmallerDevices" @click="handleSectionScreen">
                 <q-tab name="home">
                     <a>Home</a>
                 </q-tab>
@@ -46,23 +46,15 @@
             <font-awesome-icon class="fa-2x absolute-right q-pa-md" icon="fa-solid fa-xmark" />
         </span>
         <!-- @ToDo : style -->
-        <q-tabs v-model="tab"    @click="handleSection" >
-                <q-tab style="color:red" name="home">
-                    <a>Home</a>
-                </q-tab>
-                <q-tab name="why">
-                    <a>Why PVS</a>
-                </q-tab>
-                <q-tab name="listenWatch">
-                    <a>Listen and Watch</a>
-                </q-tab>
-                <q-tab name="happyClients">
-                    <a>Happy Clients</a>
-                </q-tab>
-                <q-tab name="contact">
-                    <a>Contact</a>
-                </q-tab>
-            </q-tabs>
+       <div class="column flex-center full-height">
+        <q-tabs v-model="tab" vertical class="text-teal " @click="handleSectionMobile">
+            <q-tab name="home" label="Home"/>
+            <q-tab name="why" label="Why PVS"/>
+            <q-tab name="listenWatch" label="Listen and Watch"/>
+            <q-tab name="happyClients" label="Happy Clients"/>
+            <q-tab name="contact" label="Contact"/>
+        </q-tabs>
+       </div>
         <!-- <q-list class="listContainer">
             <q-item clickable v-ripple @click="handleSectionScroll('home')">
                 <q-item-section avatar>
@@ -101,27 +93,27 @@
 </template>
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { ref ,defineProps, withDefaults} from 'vue';
+import { ref } from 'vue';
 export default {
     components: {
         FontAwesomeIcon
     },
-    setup(props,{emit}) {
+    setup(props, { emit }) {
         const tab = ref('home')
         const openDrawer = ref('false')
-        const handleSectionScroll =(sectionName)=>{
-            emit('sectionIdMobile',sectionName)
-        }
         return {
             tab,
             openDrawer,
-            handleSectionScroll
         }
     },
     methods: {
-        handleSection(){
-            this.openDrawer=false
-           this.$emit('sectionId',this.tab)
+        handleSectionScreen() {
+            this.$emit('sectionIdScreen', this.tab)
+           
+        },
+        handleSectionMobile(){
+            this.openDrawer = false
+            this.$emit('sectionIdMobile', this.tab)
         },
         handleOpeningOfDrawer() {
             this.openDrawer = true
@@ -130,11 +122,12 @@ export default {
             this.openDrawer = false
         },
 
-        onDrawerClose(){
-            this.handleSection()
+        onDrawerClose() {
+            this.handleSectionMobile()
         }
-       
-    }
+
+    },
+    
 }
 </script>
 <style scoped>
