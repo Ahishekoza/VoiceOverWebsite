@@ -6,7 +6,7 @@
                     <span v-if="counting" class="countingNumber text-red">{{ currentNumber }} </span>
                     <font-awesome-icon icon="fa-solid fa-plus" class="fa-2x q-ml-md" />
                 </div>
-                <span class="noOfClients">CLIENTS</span>
+                <p class="homeHeaderName">CLIENTS</p>
 
             </div>
             <q-separator class="showVertical" vertical />
@@ -146,12 +146,11 @@ export default {
     margin: 0 auto;
     font-size: 1.8rem;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    letter-spacing: 3px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .customerImageWrapper {

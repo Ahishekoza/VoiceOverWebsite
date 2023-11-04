@@ -8,40 +8,11 @@
                 <div class="col-md-4 col-sm-6 col-xs-12  ">
                     <span class="recordingHeading">Hindi</span>
                     <div class="column q-gutter-y-sm">
-                        <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
-                        </div>
-                        <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
-                        </div>
-                        <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
-                        </div>
-                        <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
-                        </div>
 
-
+                        <div class="col-sm-3  column q-pa-xs flex-center" v-for="audio in hindi_narration">
+                            <audio-normal :title="audio.title"  :audioPath="audio.track"/>
+                        </div>
+                        
                     </div>
                 </div>
                 <!-- Col 2 -->
@@ -49,39 +20,17 @@
                     <span class="recordingHeading">English</span>
                     <div class="column q-gutter-y-sm">
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
-
-
 
                     </div>
                 </div>
@@ -90,36 +39,16 @@
                     <span class="recordingHeading">Marathi</span>
                     <div class="column q-gutter-y-sm">
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
                         <div class="col-sm-3  column q-pa-xs flex-center">
-                            <div v-motion-slide-visible-bottom>
-                                <span class="audioHeading">Hindi Audio</span>
-                                <audio controls>
-                                    <source src="../assets/audios/file_example_MP3_700KB.mp3">
-                                </audio>
-                            </div>
+                            <audio-normal title="Hindi IVR"/>
                         </div>
                     </div>
                 </div>
@@ -130,23 +59,41 @@
 </template>
 <script>
 import { ref } from 'vue';
-import Audio from './Audio.vue';
-
+import AudioNormal from './AudioNormal.vue';
+import HindiTrack1 from '@/assets/audios/hindi_narration.mp3'
+import HindiTrack2 from '@/assets/audios/hindi_narration_explain.mp3'
+import HindiTrack3 from '@/assets/audios/aggressive_voice.mp3'
+import HindiTrack4 from '@/assets/audios/child_voice.mp3'
 export default {
     name: 'ListenWatch',
     setup() {
-        const sources = ref([
+        const hindi_narration = ref([
             {
-                src: "../assets/audios/file_example_MP3_700KB.mp3",
-                title: "Abhishek",
-                coverImage: "../assets/voiceOverLogo.jpg"
+                track:HindiTrack1,
+                title:'Hindi IVR',
+            },
+            {
+                track:HindiTrack2,
+                title:'Hindi Narration'
+            },
+            {
+                track:HindiTrack3,
+                title:'Motivational Voice'
+            },
+            {
+                track:HindiTrack4,
+                title:'Child`s Voice'
             }
-        ]);
+        ])
+        const english_narration = ref([])
+        const marathi_naration = ref([])
         return {
-            sources
+            hindi_narration,
+            english_narration,
+            marathi_naration
         };
     },
-    components: { Audio }
+    components: { AudioNormal }
 }
 </script>
 
@@ -183,14 +130,10 @@ export default {
     display: block;
     margin: 30px 0 10px 0;
     text-align: center;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: 'Sofia Sans', sans-serif;
 }
 
-.audioHeading {
-    display: block;
-    font-size: 17px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
+
 </style>

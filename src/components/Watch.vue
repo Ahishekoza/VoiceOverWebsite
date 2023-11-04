@@ -40,6 +40,7 @@
 <script>
 export default {
     name: 'Services'
+    // TODO : creating a variable which is an array of links for youtube 
 }
 </script>
 <style scoped>

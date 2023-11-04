@@ -15,12 +15,9 @@
               expressive and emotive delivery.</p>
           </div>
           <div class="row  q-gutter-y-md" style="width: 90%; margin: 0 auto;">
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 "><Audio title="HINDI NARRATION"
-                :audioPath="hindiNarration" /></div>
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 "><Audio title="ENGLISH NARRATION"
-                :audioPath="englishNarration" /></div>
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 "><Audio title="Child's Voice NARRATION"
-                :audioPath="childVoiceNarration" /></div>
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 " v-for="audio in mainNarrationTracks"><Audio
+                :title="audio.title" :audioPath="audio.track" /></div>
+
           </div>
         </div>
       </div>
@@ -43,13 +40,23 @@ export default {
 
   components: { Audio },
   setup() {
-    const hindiNarration = ref(HindiTrack)
-    const englishNarration = ref(EnglishTrack)
-    const childVoiceNarration = ref(ChildTrack)
+
+    const mainNarrationTracks = ref([
+      {
+        track: HindiTrack,
+        title: 'HINDI NARRATION'
+      },
+      {
+        track: EnglishTrack,
+        title: 'ENGLISH NARRATION'
+      },
+      {
+        track: ChildTrack,
+        title: "CHILD'S VOICE"
+      }
+    ])
     return {
-      hindiNarration,
-      englishNarration,
-      childVoiceNarration,
+      mainNarrationTracks
     }
   }
 }

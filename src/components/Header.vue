@@ -45,16 +45,7 @@
         <span @click="handleClosingOfDrawer">
             <font-awesome-icon class="fa-2x absolute-right q-pa-md" icon="fa-solid fa-xmark" />
         </span>
-        <!-- @ToDo : style -->
-        <!-- <div class="column full-height q-mx-auto q-justify-center">
-            <q-tabs v-model="tab" vertical class="text-teal" @click="handleSectionMobile">
-                <q-tab name="home" label="Home" />
-                <q-tab name="why" label="Why PVS" />
-                <q-tab name="listenWatch" label="Listen and Watch" />
-                <q-tab name="happyClients" label="Happy Clients" />
-                <q-tab name="contact" label="Contact" />
-            </q-tabs>
-        </div> -->
+       
         <q-list class="listContainer">
             <q-item clickable v-ripple active-class="menuLinkColor" :active="listValue==='home'" @click="handleSectionMobile(listValue='home')">
                 <q-item-section avatar>
@@ -157,7 +148,7 @@ a {
 }
 
 .buttonIcon:hover {
-    color: rgba(165, 18, 24);
+    color: #F35D52;
 }
 
 .insertToolbarWidth {

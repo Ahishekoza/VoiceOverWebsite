@@ -2,6 +2,7 @@
     <div class="testimonalContainer">
         <span class="testimonalHeading">Testimonals</span>
         <p class="underline"></p>
+        <!-- Big Screen Carousel -->
         <q-carousel class="noShowOnSmallScreen " v-model="slide" control-color="black" :transition-duration="1000"
             navigation padding autoplay infinite transition-prev="slide-right" transition-next="slide-left" swipeable
             animated height="300px">
@@ -12,7 +13,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span  style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -25,7 +26,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span  style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -42,7 +43,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span  style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -55,7 +56,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -72,7 +73,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span  style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -85,7 +86,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span  style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -102,7 +103,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -115,7 +116,7 @@
                             class="full-height rounded-borders">
                             <span class="absolute-center  flex flex-center" style="width: 80%;margin: 0 auto;">
                                 <span class="q-mb-md" style="font-size: 18px;">Client Name</span>
-                                <span class="" style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                <span  style="font-size: 17px;">Lorem ipsum dolor sit, amet consectetur adipisicing
                                     elit.
                                     Deserunt maxime, minima amet
                                     necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
@@ -126,17 +127,17 @@
                 </div>
             </q-carousel-slide>
         </q-carousel>
-        <!-- Show On Small Devices -->
+        <!-- Small Screen Carousel -->
         <q-carousel v-model="slide1" ref="carousel" :transition-duration="1000" height="300px" control-color="amber"
-            swipeable autoplay infinite class="bg-grey-9 showOnSmallDevices">
+            swipeable class="bg-grey-9 showOnSmallDevices">
             <q-carousel-slide :name="1" class="column nowrap">
 
                 <div class="full-height">
                     <q-img src="../assets/border-design-transparent-background-6.png"
                         class="full-height bg-white rounded-borders">
-                        <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
+                        <span class="absolute-full  column flex-center" style="width: 90%; margin: 0 auto; z-index: 20;">
                             <span class="q-mb-sm">Client Name</span>
-                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            <span style="width: 80%;" >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
                             </span>
@@ -151,7 +152,7 @@
                         class="full-height bg-white rounded-borders">
                         <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
                             <span class="q-mb-sm">Client Name</span>
-                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            <span style="width: 80%;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
                             </span>
@@ -165,7 +166,7 @@
                         class="full-height bg-white rounded-borders">
                         <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
                             <span class="q-mb-sm">Client Name</span>
-                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            <span style="width: 80%;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
                             </span>
@@ -179,7 +180,7 @@
                         class="full-height bg-white rounded-borders">
                         <span class="absolute-full column flex-center" style="width: 90%; margin: 0 auto;">
                             <span class="q-mb-sm">Client Name</span>
-                            <span class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            <span style="width: 80%;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Deserunt maxime, minima amet
                                 necessitatibus quasi nesciunt ea placeat. Unde id perferendis eius atque modi, ab omnis!
                             </span>

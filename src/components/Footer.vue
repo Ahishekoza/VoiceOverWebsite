@@ -5,9 +5,9 @@
             <p class="paragraphContent">I have completed 2000+ successful Voice-Over projects in E-learning, Commercial ads, IVR, Explainer videos and more.</p>
             <div class="flex flex-center">
                 <font-awesome-icon class="q-mr-sm   buttonIcon" icon="fa-brands fa-instagram" />
-                <font-awesome-icon class="q-mr-sm   buttonIcon" icon="fa-brands fa-instagram" />
-                <font-awesome-icon class="q-mr-sm   buttonIcon" icon="fa-brands fa-instagram" />
-                <font-awesome-icon class="q-mr-sm   buttonIcon" icon="fa-brands fa-instagram" />
+                <font-awesome-icon class="q-mr-sm   buttonIcon" icon="fa-brands fa-linkedin" />
+                <font-awesome-icon class="q-mr-sm   buttonIcon" icon="fa-brands fa-youtube" />
+                <font-awesome-icon class="q-mr-sm   buttonIcon" icon="fa-solid fa-cloud" />
             </div>
            <q-btn class="q-my-lg text-white text-h6 bg-red q-pa-sm rounded-borders pointer">Contact Info</q-btn>
            <p class="text-white paragraphContent">
@@ -48,6 +48,8 @@ export default {
 .buttonIcon{
     background-color: white;
     padding: 5px;
+    height: 20px;
+    width:20px;
     border-radius:50% ;
     font-size: 19px;
     cursor: pointer;
@@ -63,10 +65,17 @@ export default {
     .paragraphContent{
     font-size: 1rem;
     font-weight: 500;
+    width: 100% !important;
     line-height: 2rem;
     text-align: center;
     letter-spacing: 0.0125em;
     color: white;
 }
+}
+@media (max-width: 820px) {
+    .paragraphContent{
+        width: 80%;
+        text-align: center;
+    }
 }
 </style>

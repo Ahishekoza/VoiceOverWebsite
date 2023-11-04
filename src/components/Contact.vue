@@ -1,15 +1,21 @@
 <template>
   <div class="contactContainer">
     <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12   column flex-center q-py-md">
-        <h5 class=" voiceOverHeading">Ready To Start Your Voice Over Project with Me</h5>
-        <p class="voiceOverContent">Email : abhishekOza11@gmail.com</p>
-        <p class="voiceOverContent">Phone : 7841838287</p>
-        <q-btn class="bg-white" label="Let's Connect"></q-btn>
+      <div class="col-md-6 col-sm-6 col-xs-12  contactInfoCenter   q-pa-md">
+        <div class="column flex-start">
+          <h5 class=" voiceOverHeading">Ready To Start Your Voice Over Project with Me</h5>
+          <p class="voiceOverContent"><span style="font-family: 'Lobster', sans-serif;">Email</span> :
+            <q-icon name="mail"/>
+            abhishekOza11@gmail.com</p>
+          <p class="voiceOverContent"><span style="font-family: 'Lobster', sans-serif;">Phone</span> :<q-icon name="call" class="q-px-xs"/> (+91) 7841838287</p>
+        </div>
+        <q-btn class="bg-black connectButton text-white q-my-md" label="Let's Connect"></q-btn>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12  q-pa-sm ">
         <div class="bg-white shadow-2 full-height q-pa-md rounded-borders">
-          <span class="q-pa-md" style="text-align: left; display: block; font-size: 30px; ">Get In Touch</span>
+          <span class="q-pa-md"
+            style="text-align: left; display: block; font-size: 40px; font-family: 'Lobster', sans-serif; ">Get In
+            Touch</span>
 
           <q-form class="q-pa-md" @submit.prevent="handleSubmit">
             <q-input v-model="formData.name" label="Name *" outlined color="black" class="q-mb-xs"
@@ -70,35 +76,51 @@ export default {
   background-color: #950000;
 }
 
-.form-control {
-  width: 100%;
-  height: 40px;
-  font-size: 20px;
-}
 
-.textControl {
-  height: 100%;
-  min-height: 100px;
-}
 
 
 .voiceOverHeading {
-  font-size: 28px;
+  font-size: 35px;
   color: white;
   width: 80%;
+  letter-spacing: 2px;
   line-height: 45px;
   text-align: left;
+  font-family: 'Lobster', sans-serif;
 }
 
 .voiceOverContent {
-  font-size: 20px;
+  font-size: 25px;
   color: white;
+
+
+}
+.contactInfoCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.connectButton{
+  transition: all 0.2s ease-in-out ;
+}
+.connectButton:hover{
+  transform: translateY(-5px);
 }
 
 @media (max-width: 576px) {
   .voiceOverHeading {
-    width: 90%;
-    text-align: center;
+    width: 100% !important;
+    line-height: 50px !important;
+    font-size: 25px !important;
+  }
+
+  .voiceOverContent {
+    font-size: 20px !important;
+    color: white;
+
+
   }
 }
 
@@ -108,6 +130,17 @@ export default {
     color: white;
     width: 80%;
     line-height: 40px;
+
+  }
+  .contactInfoCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .voiceOverContent {
+    font-size: 20px !important;
+    color: white;
 
   }
 }
