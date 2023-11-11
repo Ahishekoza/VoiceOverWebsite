@@ -37,6 +37,7 @@
   </div>
 </template>
 <script>
+import axios from "axios"
 export default {
   name: 'contact',
   data() {
@@ -60,10 +61,13 @@ export default {
       }
       return true
     },
-    handleSubmit(e) {
-      if (this.formData.name === 'abhishek' && this.formData.email === 'abhishekoza11@gmail.com') {
-        this.$router.push('/data')
-      }
+    async handleSubmit(e) {
+      console.log("working");
+      await axios.post('http://localhost:3000/sendEmail',{email:this.formData.email, name:this.formData.name,message:this.formData.message}).then((response)=>{
+        console.log(response.message);
+      }).catch((error)=>{
+        console.log(error.message);
+      })
     },
   }
 }

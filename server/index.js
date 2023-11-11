@@ -9,7 +9,7 @@ app.use(morgan('dev'))
 app.use(cors())
 app.use(express.json())
 
-app.get('/sendEmail',(req,res)=>{
+app.post('/sendEmail',(req,res)=>{
 
     const {email,name,message} = req.body;
 
