@@ -2,8 +2,8 @@
   <section class="homeContainer">
     <div class="homeWrapperContainer">
       <div class="row ">
-        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 flex flex-center">
-          <q-img src="../assets/voiceOverLogo.jpg" class="homeImage " v-motion-slide-visible-left />
+        <div class="col-md-4  col-lg-3 col-sm-6 col-xs-12 flex flex-center">
+          <q-img src="../assets/voiceOverLogo.jpg" class="homeImage  "  />
         </div>
         <div class="col-md-8 col-lg-8 col-sm-6 col-xs-12 column flex-center q-mt-md">
           <span class="homeHeaderName ">Pranjal Vyas</span>
@@ -81,7 +81,7 @@ export default {
   height: 100%;
   object-fit: cover;
 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
 }
 
 .homeHeaderName {

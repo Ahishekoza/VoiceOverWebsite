@@ -7,8 +7,8 @@
                 abhishekoza11@gmail.com
             </span>
             <q-space />
-            <font-awesome-icon class="q-mr-sm fa-2x buttonIcon" icon="fa-brands fa-instagram" />
-            <font-awesome-icon class="fa-2x buttonIcon" icon="fa-brands fa-linkedin" />
+            <font-awesome-icon @click="handleInstaLink" class="q-mr-sm fa-2x buttonIcon" icon="fa-brands fa-instagram" />
+            <font-awesome-icon @click="handleSoundCloudLink" class="fa-2x buttonIcon" icon="fa-solid fa-cloud" />
         </q-toolbar>
 
         <q-toolbar inset class="insertToolbarWidth">
@@ -97,7 +97,11 @@ export default {
     components: {
         FontAwesomeIcon
     },
-    setup(props, { emit }) {
+    props:{
+        handleInstaLink:Function,
+        handleSoundCloudLink:Function
+    },
+    setup() {
         const tab = ref('home')
         const openDrawer = ref('false')
         const listValue = ref('home')

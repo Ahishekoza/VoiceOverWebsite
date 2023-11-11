@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DataReview from '@/views/DataReview.vue'
+import splashView from '@/views/splashView.vue'
 import HomeView from '@/views/HomeView.vue'
 const routes = [
   {
-    path:'/',
+    path:'/home',
     name:'Home',
     component:HomeView
   },
   {
-    path: '/data',
-    name: 'DataReview',
-    component: DataReview
+    path: '/',
+    name: 'splashView',
+    component: splashView
   }
 ]
 

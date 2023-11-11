@@ -1,6 +1,10 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <Header @sectionIdScreen="scrollToSection($event)" @sectionIdMobile="scrollToSectionMobile($event)" />
+    <Header 
+    :handleInstaLink="handleInstaLink" 
+    :handleSoundCloudLink="handleSoundCloudLink"
+    @sectionIdScreen="scrollToSection($event)" 
+    @sectionIdMobile="scrollToSectionMobile($event)" />
     <q-page-container>
       <q-page>
         <Home id="home" />
@@ -24,10 +28,15 @@
           </div>
         </div>
         <Testimonal id="happyClients" />
-        <Contact id="contact" />
+        <Contact id="contact"  @sectionIdScreen="scrollToSection($event)"  />
       </q-page>
     </q-page-container>
-    <Footer />
+    <Footer 
+    :handleInstaLink="handleInstaLink" 
+    :handleLinkdeInLink="handleLinkdeInLink" 
+    :handleYoutubeLink="handleYoutubeLink" 
+    :handleSoundCloudLink="handleSoundCloudLink"  
+    @sectionIdScreen="scrollToSection($event)"  />
   </q-layout>
 </template>
   
@@ -81,6 +90,20 @@ export default {
       sectionIdValue,
       scrollToSection,
       scrollToSectionMobile
+    }
+  },
+  methods:{
+    handleInstaLink(){
+      console.log('Instagram Link ')
+    },
+    handleYoutubeLink(){
+      console.log('Youtube Link ')
+    },
+    handleLinkdeInLink(){
+      console.log('Link de In Link ')
+    },
+    handleSoundCloudLink(){
+      console.log('SoundCloud Link ')
     }
   }
 }

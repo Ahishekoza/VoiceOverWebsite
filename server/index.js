@@ -35,7 +35,7 @@ app.post('/sendEmail',(req,res)=>{
     try {
         transporter.sendMail(mailOptions).then((response)=>{
             res.status(200).json({
-                message : 'Thank you for contacting'
+                message : 'Thank you for Contacting'
             })
         })
     } catch (error) {

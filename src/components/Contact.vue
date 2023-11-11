@@ -5,11 +5,14 @@
         <div class="column flex-start">
           <h5 class=" voiceOverHeading">Ready To Start Your Voice Over Project with Me</h5>
           <p class="voiceOverContent"><span style="font-family: 'Lobster', sans-serif;">Email</span> :
-            <q-icon name="mail"/>
-            abhishekOza11@gmail.com</p>
-          <p class="voiceOverContent"><span style="font-family: 'Lobster', sans-serif;">Phone</span> :<q-icon name="call" class="q-px-xs"/> (+91) 7841838287</p>
+            <q-icon name="mail" />
+            abhishekOza11@gmail.com
+          </p>
+          <p class="voiceOverContent"><span style="font-family: 'Lobster', sans-serif;">Phone</span> :<q-icon name="call"
+              class="q-px-xs" /> (+91) 7841838287</p>
         </div>
-        <q-btn class="bg-black connectButton text-white q-my-md" label="Let's Connect"></q-btn>
+        <q-btn @click="handleConnectClick" class="bg-black connectButton text-white q-my-md"
+          label="Let's Connect"></q-btn>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12  q-pa-sm ">
         <div class="bg-white shadow-2 full-height q-pa-md rounded-borders">
@@ -18,11 +21,11 @@
             Touch</span>
 
           <q-form class="q-pa-md" @submit.prevent="handleSubmit">
-            <q-input v-model="formData.name" label="Name *" outlined color="black" class="q-mb-xs"
-              :rules="[val => val && val.length > 0 || 'Name is Required']">
+            <q-input v-model="formData.name" label="Name *" outlined color="black" class="q-mb-xs">
+              <!-- :rules="[val => val && val.length > 0 || 'Name is Required']"   -->
             </q-input>
-            <q-input v-model="formData.email" label="Email *" outlined color="black" class="q-mb-xs"
-              :rules="[isEmailValid]">
+            <q-input v-model="formData.email" label="Email *" outlined color="black" class="q-mb-xs">
+              <!-- :rules="[isEmailValid]" -->
             </q-input>
             <q-input v-model="formData.message" outlined color="black" label="Message" type="textarea">
             </q-input>
@@ -34,6 +37,14 @@
         </div>
       </div>
     </div>
+    <q-dialog v-model="dialog" position="top">
+      <q-card style="width: 450px">
+        <q-linear-progress :value="0.6" color="pink" />
+        <q-card-section class="row items-center justify-center">
+          <span class="responseSuccessMessage">{{ responseMessage }}</span>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </div>
 </template>
 <script>
@@ -43,6 +54,8 @@ export default {
   data() {
     return {
       openDrawer: false,
+      dialog: false,
+      responseMessage: '',
       formData: {
         name: "",
         email: "",
@@ -62,13 +75,20 @@ export default {
       return true
     },
     async handleSubmit(e) {
-      console.log("working");
-      await axios.post('http://localhost:3000/sendEmail',{email:this.formData.email, name:this.formData.name,message:this.formData.message}).then((response)=>{
-        console.log(response.message);
-      }).catch((error)=>{
-        console.log(error.message);
+
+      await axios.post('http://localhost:3000/sendEmail', { email: this.formData.email, name: this.formData.name, message: this.formData.message }).then((response) => {
+        this.responseMessage= response.message
+        this.dialog = true
+        setTimeout(() => {
+          this.dialog = false
+        }, 800)
+      }).catch((error) => {
+        this.responseMessage = error.message
       })
     },
+    handleConnectClick() {
+      this.$emit('sectionIdScreen', 'contact')
+    }
   }
 }
 </script>
@@ -79,9 +99,6 @@ export default {
   min-height: 500px;
   background-color: #950000;
 }
-
-
-
 
 .voiceOverHeading {
   font-size: 35px;
@@ -99,18 +116,25 @@ export default {
 
 
 }
-.contactInfoCenter{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-.connectButton{
-  transition: all 0.2s ease-in-out ;
+.contactInfoCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.connectButton:hover{
+
+.connectButton {
+  transition: all 0.2s ease-in-out;
+}
+
+.connectButton:hover {
   transform: translateY(-5px);
+}
+
+.responseSuccessMessage {
+  font-size: 1.4rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 @media (max-width: 576px) {
@@ -136,12 +160,14 @@ export default {
     line-height: 40px;
 
   }
-  .contactInfoCenter{
+
+  .contactInfoCenter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .voiceOverContent {
     font-size: 20px !important;
     color: white;
@@ -149,5 +175,4 @@ export default {
   }
 }
 
-/* Define your custom CSS styles here */
-</style>
+/* Define your custom CSS styles here */</style>
