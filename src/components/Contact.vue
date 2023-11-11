@@ -15,12 +15,15 @@
           label="Let's Connect"></q-btn>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12  q-pa-sm ">
-        <div class="bg-white shadow-2 full-height q-pa-md rounded-borders">
+
+        <div class="bg-white shadow-2 full-height q-pa-md rounded-borders relative">
           <span class="q-pa-md"
             style="text-align: left; display: block; font-size: 40px; font-family: 'Lobster', sans-serif; ">Get In
             Touch</span>
 
-          <q-form class="q-pa-md" @submit.prevent="handleSubmit">
+
+          <q-form class="q-pa-md relative" @submit.prevent="handleSubmit">
+            <q-spinner-ios v-show="showSpinner" color="black" class="absolute-center iconSize"  />
             <q-input v-model="formData.name" label="Name *" outlined color="black" class="q-mb-xs">
               <!-- :rules="[val => val && val.length > 0 || 'Name is Required']"   -->
             </q-input>
@@ -55,6 +58,7 @@ export default {
     return {
       openDrawer: false,
       dialog: false,
+      showSpinner : false,
       responseMessage: '',
       formData: {
         name: "",
@@ -75,9 +79,11 @@ export default {
       return true
     },
     async handleSubmit(e) {
-
+      this.showSpinner=true
       await axios.post('http://localhost:3000/sendEmail', { email: this.formData.email, name: this.formData.name, message: this.formData.message }).then((response) => {
-        this.responseMessage= response.message
+        this.showSpinner=false;
+        this.responseMessage = response.data.message
+        console.log(response);
         this.dialog = true
         setTimeout(() => {
           this.dialog = false
@@ -136,7 +142,9 @@ export default {
   font-size: 1.4rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+.iconSize{
+  font-size: 4em;
+}
 @media (max-width: 576px) {
   .voiceOverHeading {
     width: 100% !important;
@@ -175,4 +183,5 @@ export default {
   }
 }
 
-/* Define your custom CSS styles here */</style>
+/* Define your custom CSS styles here */
+</style>
